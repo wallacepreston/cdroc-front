@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import React from "react";
 // react components for routing our app without refresh
-import { Link } from "gatsby";
+import { Link, StaticQuery, graphql } from 'gatsby'
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -24,11 +24,25 @@ import headerLinksStyle from "assets/jss/material-kit-react/components/headerLin
 function HeaderLinks({ ...props }) {
   const { classes } = props;
   return (
-    <List className={classes.list}>
+    <StaticQuery
+    query={graphql`
+      query {
+        allWordpressPage(sort: { fields: wordpress_id }, limit: 5) {
+          edges {
+            node {
+              title
+              slug
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <List className={classes.list}>
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
-          buttonText="Components"
+          buttonText="Menu"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
@@ -36,15 +50,17 @@ function HeaderLinks({ ...props }) {
           buttonIcon={Apps}
           dropdownList={[
             <Link to="/" className={classes.dropdownLink}>
-              All components
+              Home
             </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>
+            ...data.allWordpressPage.edges.map(edge => (
+              <Link
+                className={classes.dropdownLink}
+                to={`/${edge.node.slug}`}
+                key={edge.node.slug}
+              >
+                {edge.node.title}
+              </Link>
+            )),
           ]}
         />
       </ListItem>
@@ -110,6 +126,12 @@ function HeaderLinks({ ...props }) {
         </Tooltip>
       </ListItem>
     </List>
+
+            
+
+    )}
+  />
+    
   );
 }
 
