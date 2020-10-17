@@ -38,42 +38,22 @@ function HeaderLinks({ ...props }) {
       }
     `}
     render={data => (
-      <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="Menu"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>
-              Home
-            </Link>,
-            ...data.allWordpressPage.edges.map(edge => (
-              <Link
-                className={classes.dropdownLink}
-                to={`/${edge.node.slug}`}
-                key={edge.node.slug}
-              >
-                {edge.node.title}
-              </Link>
-            )),
-          ]}
-        />
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/material-kit-react"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <CloudDownload className={classes.icons} /> Download
-        </Button>
-      </ListItem>
+    <List className={classes.list}>
+      {
+        data.allWordpressPage.edges.map(edge => (
+          <ListItem 
+            className={classes.listItem}
+            key={edge.node.slug}
+          >
+            <Link
+              className={classes.navLink}
+              to={`/${edge.node.slug}`}
+            >
+              {edge.node.title}
+            </Link>
+          </ListItem>
+        ))
+      }
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"

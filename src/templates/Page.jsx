@@ -40,7 +40,7 @@ class Page extends React.Component {
                 <div className={classes.brand}>
                   <h1 className={classes.title}>{data.wordpressPage.title}</h1>
                   <h3 className={classes.subtitle}>
-                    A Badass Material-UI Kit based on Material Design.
+                    Enhancing Director performance through collaboration and mentorship.
                   </h3>
                 </div>
               </GridItem>
