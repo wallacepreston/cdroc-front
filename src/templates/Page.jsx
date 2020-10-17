@@ -40,7 +40,6 @@ class Page extends React.Component {
                 <div className={classes.brand}>
                   <h1 className={classes.title}>{data.wordpressPage.title}</h1>
                   <h3 className={classes.subtitle}>
-                    Enhancing Director performance through collaboration and mentorship.
                   </h3>
                 </div>
               </GridItem>
@@ -51,7 +50,6 @@ class Page extends React.Component {
           <div className={classes.sections}>
             <div className={classes.container}>
               <div className={classes.title}>
-                <h1>{data.wordpressPage.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
               </div>
             </div>
