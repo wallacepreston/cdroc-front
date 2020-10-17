@@ -55,13 +55,6 @@ class LandingPage extends React.Component {
                   the information that can make you or your product create the
                   first impression.
                 </h4>
-                <h4>Posts</h4>
-                {data.allWordpressPost.edges.map(({ node }) => (
-                  <div>
-                    <p>{node.title}</p>
-                    <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                  </div>
-                ))}
                 <br />
                 <Button
                   color="danger"
