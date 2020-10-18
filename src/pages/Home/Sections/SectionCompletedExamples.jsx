@@ -17,12 +17,9 @@ class SectionCompletedExamples extends React.Component {
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={8}>
-              <h2>Completed with examples</h2>
+              <h2>The Sky is the Limit</h2>
               <h4>
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. More importantly, looking at them will give you a picture of
-                what you can build with this powerful kit.
+                The CDROC encourages young people to embark on a profession in accounting through it's partnership with the UCI Paul Merage School of Business. The Corporate Directors Roundtable of Orange County Scholarship is awarded annually to a graduate student enrolled in the UCI Paul Merage School of Business Master of Professional (MPAc) program.  Additionally, the CDROC offers a one-to-one mentoring program for for students enrolled in the same program.
               </h4>
             </GridItem>
           </GridContainer>

@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 import { List, ListItem, withStyles } from "@material-ui/core";
+import { Link, StaticQuery, graphql } from 'gatsby';
 
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
@@ -21,64 +22,64 @@ function Footer({ ...props }) {
     [classes.a]: true,
     [classes.footerWhiteFont]: whiteFont
   });
-  return (
-    <footer className={footerClasses}>
+  return <StaticQuery
+    query={graphql`
+      query {
+        allWordpressPage(sort: { fields: wordpress_id }, limit: 5) {
+          edges {
+            node {
+              title
+              slug
+            }
+          }
+        }
+      }
+    `}
+    render={data => (<footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.left}>
           <List className={classes.list}>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/"
+            <ListItem 
+              className={classes.inlineBlock}
+            >
+              <Link
                 className={classes.block}
-                target="_blank"
+                to={`/`}
               >
-                Creative Tim
-              </a>
+                Home
+              </Link>
             </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/presentation"
-                className={classes.block}
-                target="_blank"
-              >
-                About us
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://blog.creative-tim.com/"
-                className={classes.block}
-                target="_blank"
-              >
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/license"
-                className={classes.block}
-                target="_blank"
-              >
-                Licenses
-              </a>
-            </ListItem>
+            {
+              data.allWordpressPage.edges.map(edge => (
+                <ListItem 
+                  className={classes.inlineBlock}
+                  key={edge.node.slug}
+                >
+                  <Link
+                    className={classes.block}
+                    to={`/${edge.node.slug}`}
+                  >
+                    {edge.node.title}
+                  </Link>
+                </ListItem>
+              ))
+            }
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
+          &copy; {1900 + new Date().getYear()} CDROC, made by{" "}
           <a
-            href="https://www.creative-tim.com"
+            href="https://prestonwallace.com"
             className={aClasses}
             target="_blank"
           >
-            Creative Tim
+            Preston
           </a>{" "}
           for a better web.
         </div>
       </div>
-    </footer>
-  );
+    </footer>)}
+  />
 }
 
 Footer.propTypes = {

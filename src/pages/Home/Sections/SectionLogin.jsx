@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'gatsby'
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -27,95 +28,24 @@ class SectionLogin extends React.Component {
       <div className={classes.section}>
         <div className={classes.container}>
           <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={4}>
+            <GridItem>
               <Card>
                 <form className={classes.form}>
-                  <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
-                    <div className={classes.socialLine}>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <FaTwitter/>
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <FaFacebook/>
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <FaGooglePlusG/>
-                      </Button>
-                    </div>
-                  </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+                  
+                  <p className={classes.divider}>Mission</p>
                   <CardBody>
-                    <CustomInput
-                      labelText="First Name..."
-                      id="first"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Email..."
-                      id="email"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "email",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Password"
-                      id="pass"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "password",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Icon className={classes.inputIconsColor}>
-                              lock_outline
-                            </Icon>
-                          </InputAdornment>
-                        )
-                      }}
-                    />
+                  Located in Southern California by and for Board Directors, the Corporate Directors Roundtable of Orange County’s objective is to enhance the performance of its member Directors in their business, legal and ethical responsibilities.  This objective is addressed through interactive and candid discussions among its members, and with outside experts, on challenges, emerging trends and leading practices.  Eligibility for membership is by invitation only, and is based on skills, experience, and potential contributions of candidates.  
+
+
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
-                      Get started
-                    </Button>
+                    <Link
+                      to={'/about'}
+                    >
+                      <Button simple color="primary" size="lg">
+                        Learn More                      
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </form>
               </Card>
