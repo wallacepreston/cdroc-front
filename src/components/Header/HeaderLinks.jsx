@@ -25,93 +25,90 @@ function HeaderLinks({ ...props }) {
   const { classes } = props;
   return (
     <StaticQuery
-    query={graphql`
-      query {
-        allWordpressPage(sort: { fields: wordpress_id }, limit: 5) {
-          edges {
-            node {
-              title
-              slug
+      query={graphql`
+        query {
+          allWordpressPage(sort: { fields: wordpress_id }, limit: 5) {
+            edges {
+              node {
+                title
+                slug
+              }
             }
           }
         }
-      }
-    `}
-    render={data => (
-    <List className={classes.list}>
-      {
-        data.allWordpressPage.edges.map(edge => (
-          <ListItem 
-            className={classes.listItem}
-            key={edge.node.slug}
-          >
-            <Link
-              className={classes.navLink}
-              to={`/${edge.node.slug}`}
-            >
-              {edge.node.title}
-            </Link>
-          </ListItem>
-        ))
-      }
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            href="https://twitter.com/CreativeTim"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <FaTwitter/>
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
-          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/CreativeTim"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <FaFacebook/>
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on instagram"
-          placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <FaInstagram/>
-          </Button>
-        </Tooltip>
-      </ListItem>
-    </List>
-
-            
-
-    )}
-  />
-    
+      `}
+      render={({allWordpressPage: {edges}}) => {
+        return (
+          <List className={classes.list}>
+            {
+              edges.map(edge => (
+                <ListItem 
+                  className={classes.listItem}
+                  key={edge.node.slug}
+                >
+                  <Link
+                    className={classes.navLink}
+                    to={`/${edge.node.slug}`}
+                  >
+                    {edge.node.title}
+                  </Link>
+                </ListItem>
+              ))
+            }
+            <ListItem className={classes.listItem}>
+              <Tooltip
+                id="instagram-twitter"
+                title="Follow us on twitter"
+                placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
+                classes={{ tooltip: classes.tooltip }}
+              >
+                <Button
+                  href="https://twitter.com/CreativeTim"
+                  target="_blank"
+                  color="transparent"
+                  className={classes.navLink}
+                >
+                  <FaTwitter/>
+                </Button>
+              </Tooltip>
+            </ListItem>
+            <ListItem className={classes.listItem}>
+              <Tooltip
+                id="instagram-facebook"
+                title="Follow us on facebook"
+                placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
+                classes={{ tooltip: classes.tooltip }}
+              >
+                <Button
+                  color="transparent"
+                  href="https://www.facebook.com/CreativeTim"
+                  target="_blank"
+                  className={classes.navLink}
+                >
+                  <FaFacebook/>
+                </Button>
+              </Tooltip>
+            </ListItem>
+            <ListItem className={classes.listItem}>
+              <Tooltip
+                id="instagram-tooltip"
+                title="Follow us on instagram"
+                placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
+                classes={{ tooltip: classes.tooltip }}
+              >
+                <Button
+                  color="transparent"
+                  href="https://www.instagram.com/CreativeTimOfficial"
+                  target="_blank"
+                  className={classes.navLink}
+                >
+                  <FaInstagram/>
+                </Button>
+              </Tooltip>
+            </ListItem>
+          </List>
+      )}}
+    />
   );
 }
 

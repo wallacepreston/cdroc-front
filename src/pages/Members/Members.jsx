@@ -48,7 +48,7 @@ class Members extends React.Component {
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  <h1 className={classes.title}>Current Members</h1>
+                  <h1 className={classes.title}>Members</h1>
                 </div>
               </GridItem>
             </GridContainer>
