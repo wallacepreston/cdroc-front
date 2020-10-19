@@ -7,7 +7,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // React icons
-import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -15,13 +15,8 @@ import GridItem from "components/Grid/GridItem.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import Card from "components/Card/Card.jsx";
 import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
-
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
 
 class TeamSection extends React.Component {
   render() {
@@ -37,10 +32,10 @@ class TeamSection extends React.Component {
           <GridContainer>
             {
               members.map(({node: {acf: member}}) => (
-                <GridItem xs={12} sm={12} md={4}>
+                <GridItem xs={12} sm={12} md={4} key={member.image}>
                   <Card plain>
                     <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                      <img src={member.image} alt={`headshot image of ${member.name}`} className={imageClasses} />
+                      <img src={member.image} alt={`headshot of ${member.name}`} className={imageClasses} />
                     </GridItem>
                     <h4 className={classes.cardTitle}>
                       {member.name}
