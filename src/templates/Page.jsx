@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react components for routing our app without refresh

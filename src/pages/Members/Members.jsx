@@ -48,7 +48,7 @@ class Members extends React.Component {
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
             <ProductSection />
-            <TeamSection members={data.allWordpressPost.edges}/>
+            <TeamSection members={data && data.allWordpressPost.edges}/>
           </div>
         </div>
         <Footer />
