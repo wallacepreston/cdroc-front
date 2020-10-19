@@ -7,7 +7,12 @@ const imagesStyles = {
     borderRadius: "6px !important"
   },
   imgRoundedCircle: {
-    borderRadius: "50% !important"
+    width: "100%",
+    "clip-path": "circle(40% at center)",
+    borderRadius: "50% !important",
+    "@media (max-width: 960px)": {
+      width: "50%",
+    },
   },
   imgRaised: {
     boxShadow:
