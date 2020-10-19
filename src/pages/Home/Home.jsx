@@ -30,7 +30,7 @@ import SectionDownload from "./Sections/SectionDownload.jsx";
 
 import componentsStyle from "assets/jss/material-kit-react/views/components.jsx";
 
-class Components extends React.Component {
+class Home extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     return (
@@ -72,4 +72,4 @@ class Components extends React.Component {
   }
 }
 
-export default withStyles(componentsStyle)(Components);
+export default withStyles(componentsStyle)(Home);
