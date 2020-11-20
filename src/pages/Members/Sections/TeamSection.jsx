@@ -46,11 +46,6 @@ class TeamSection extends React.Component {
                         </small>
                       </a>
                     </h4>
-                    <CardBody>
-                      <p className={classes.description}>
-                        This is where the bio for {member.name} would go. We could provide a short bio or just some interesting information about {member.name}.
-                      </p>
-                    </CardBody>
                     <a href={member.bio}>
                       <small className={classes.smallTitle}>
                         <Button
