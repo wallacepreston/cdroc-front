@@ -1,63 +1,68 @@
 import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
-// @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-// @material-ui/icons
-// core components
-import Header from "components/Header/Header.jsx";
-import Footer from "components/Footer/Footer.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Parallax from "components/Parallax/Parallax.jsx";
-// sections for this page
+import { Link } from 'gatsby'
+
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import SectionCompletedExamples from "./Sections/SectionCompletedExamples.jsx";
-import SectionLogin from "./Sections/SectionLogin.jsx";
-import SectionDownload from "./Sections/SectionDownload.jsx";
+import Layout from "components/Layout.jsx";
 
-import componentsStyle from "assets/jss/material-kit-react/views/components.jsx";
+{/* data.wordpressPage.title */}
+{/* <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} /> */}
+const Home = () => {
+  return <>
+    <Layout>
+      
+      <div className="cdroc-row cdroc-flex-reverse">
 
-class Home extends React.Component {
-  render() {
-    const { classes, ...rest } = this.props;
-    return (
-      <div>
-        <Header
-          brand="CDROC"
-          rightLinks={<HeaderLinks />}
-          fixed
-          color="transparent"
-          changeColorOnScroll={{
-            height: 400,
-            color: "white"
-          }}
-          {...rest}
-        />
-        <Parallax image={require("assets/img/cdroc-splash-boardroom-image.jpg")}>
-          <div className={classes.container}>
-            <GridContainer>
-              <GridItem>
-                <div className={classes.brand}>
-                  <h1 className={classes.title}>Corporate Directors Roundtable of Orange County</h1>
-                  <h3 className={classes.subtitle}>
-                    Enhancing Director performance through collaboration and mentorship.
-                  </h3>
-                </div>
-              </GridItem>
-            </GridContainer>
-          </div>
-        </Parallax>
+        {/* <!-- Body content --> */}
+        <div className="cdroc-col cdroc-body">
+          
+          <h2>Celebrating 13 Years of Excellence in the Boardroom</h2>
+          <h3>Upcoming Meetings</h3>
+          <b>Quarterly Member Meetings – Wednesdays at 7:30 a.m.</b>
+          <ul>
+            <li>March 31, 2021</li>
+            <li>March 31, 2021</li>
+            <li>June 30, 2021</li>
+            <li>September 29, 2021</li>
+          </ul>
+          <h3>Special Discussion Meetings &amp; Events</h3>
+          <p>Our periodic “special discussion” meetings are scheduled during the year depending on the interests of our members, timeliness of topics, and the availability of invited speakers and our guests.</p>
+          <h3>Scholarship Program</h3>
+          <p>An academic scholarship award is granted each year by the CDROC to a high performing graduate student enrolled in The Paul Merage School of Business at UC Irvine. The 2019 Award Winner was Natalie Tincopa, and the 2020 Award Winner was Omar Ramil.</p>
 
-        <div className={classNames(classes.main, classes.mainRaised)}>
-          <SectionCompletedExamples />
-          <SectionLogin />
-          <SectionDownload />
+          <b>Established In Orange County, California on October 1, 2008</b>
+
         </div>
-        <Footer />
+
+        {/* <!-- Sidebar content --> */}
+        <aside className="cdroc-col cdroc-sidebar">
+
+          {/* <!-- Sidbar callout box --> */}
+          <div className="cdroc-sidebar-box">
+            <h3>Mission</h3>
+
+            <p>By and for Board Members, the Corporate Directors Roundtable of Orange County’s objective is to enhance
+  the performance of its member Directors in their business, legal and ethical responsibilities. This objective is
+  addressed through interactive and candid discussions among its members, and with outside experts, on
+  challenges, emerging trends and leading practices. Eligibility for membership is by invitation only, and is
+  based on skills, experience, and potential contributions of candidates.</p>
+
+          </div>
+
+          {/* <!-- Sidbar secondary box --> */}
+          <div className="cdroc-sidebar-box-secondary">
+            <h3>Mentorship Program</h3>
+
+            <p>The CDROC has a mentorship program with UC Irvine undergraduate students enrolled in either the School of
+  Business or School of Computer Sciences. Currently four mentorships are active.</p>
+
+          </div>
+
+        </aside>
       </div>
-    );
-  }
+
+    </Layout>
+    
+  </>
 }
 
-export default withStyles(componentsStyle)(Home);
+export default Home;
