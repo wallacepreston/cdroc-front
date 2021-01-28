@@ -50,7 +50,7 @@ const Layout = ({children}) => {
       </div>
       {/* <!-- Page content --> */}
       <div className="cdroc-full-row">
-          {children}
+        {children}
       </div>
     </main>
 
