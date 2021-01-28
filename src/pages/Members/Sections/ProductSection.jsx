@@ -17,15 +17,11 @@ class ProductSection extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.section}>
-        <GridContainer justify="center">
-          <GridItem xs={12} sm={12} md={8}>
-            <h2 className={classes.title}>Our Members</h2>
-            <h5 className={classes.description}>
+      <div>
+            <h2>Our Members</h2>
+            <h5>
               The Corporate Directors Roundtable of Orange County’s objective is to enhance the performance of its member Directors in their business, legal and ethical responsibilities.  This objective is addressed through interactive and candid discussions among its members, and with outside experts, on challenges, emerging trends and leading practices.  Eligibility for membership is by invitation only, and is based on skills, experience, and potential contributions of candidates.  
             </h5>
-          </GridItem>
-        </GridContainer>
         <div>
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>

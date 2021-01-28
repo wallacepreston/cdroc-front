@@ -18,43 +18,19 @@ import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.js
 import ProductSection from "./Sections/ProductSection.jsx";
 import TeamSection from "./Sections/TeamSection.jsx";
 
-class Members extends React.Component {
-  render() {
-    const { classes, data, myName, ...rest } = this.props;
-    return (
+import Layout from "components/Layout.jsx";
+
+
+const Members = ({ classes, data, myName, ...rest }) => {
+  
+  return <Layout>
+    <div className="cdroc-row">
       <div>
-        <Header
-          brand="CDROC"
-          rightLinks={<HeaderLinks />}
-          fixed
-          color="transparent"
-          changeColorOnScroll={{
-            height: 100,
-            color: "white"
-          }}
-          {...rest}
-        />
-        <Parallax small image={require("assets/img/cdroc-splash-boardroom-image.jpg")}>
-          <div className={classes.container}>
-            <GridContainer>
-              <GridItem>
-                <div className={classes.brand}>
-                  <h1 className={classes.title}>Members</h1>
-                </div>
-              </GridItem>
-            </GridContainer>
-          </div>
-        </Parallax>
-        <div className={classNames(classes.main, classes.mainRaised)}>
-          <div className={classes.container}>
-            <ProductSection />
-            <TeamSection members={data && data.allWordpressPost.edges}/>
-          </div>
-        </div>
-        <Footer />
+        <ProductSection />
+        <TeamSection members={data && data.allWordpressPost.edges}/>
       </div>
-    );
-  }
+    </div>
+  </Layout>
 }
 
-export default withStyles(landingPageStyle)(Members);
+export default Members;
