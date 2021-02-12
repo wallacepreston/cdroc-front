@@ -4,8 +4,6 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 
-// @material-ui/icons
-
 // React icons
 import { FaLinkedin, FaChalkboardTeacher } from 'react-icons/fa';
 
