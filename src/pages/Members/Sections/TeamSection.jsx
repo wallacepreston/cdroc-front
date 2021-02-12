@@ -7,7 +7,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // React icons
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaChalkboardTeacher } from 'react-icons/fa';
 
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -42,21 +42,17 @@ class TeamSection extends React.Component {
                       <br />
                       <a href={member.bio}>
                         <small className={classes.smallTitle}>
-                          {member.bio}
+                          <Button
+                            justIcon
+                            color="transparent"
+                            className={classes.marginSides}
+                          >
+                            <FaChalkboardTeacher/>
+                          </Button>
+                          Member Bio
                         </small>
                       </a>
                     </h4>
-                    <a href={member.bio}>
-                      <small className={classes.smallTitle}>
-                        <Button
-                          justIcon
-                          color="transparent"
-                          className={classes.margin5}
-                        >
-                          <FaLinkedin/>
-                        </Button>
-                      </small>
-                    </a>
                   </Card>
                 </GridItem>
               ))

@@ -40,7 +40,12 @@ const teamStyle = {
     color: "#999"
   },
   margin5: {
-    margin: "5px"
+    margin: "5px",
+  },
+  marginSides: {
+    margin: "0px",
+    paddingLeft: "0px",
+    paddingRight: "10px",
   }
 };
 

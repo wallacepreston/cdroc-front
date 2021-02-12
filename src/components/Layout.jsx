@@ -60,21 +60,6 @@ const Layout = ({children}) => {
           <Link to="/"><img className="cdroc-crest-svg" src="/logo-transp.png" alt="Link to CDROC home page"/></Link>
         </div>
         <div className="cdroc-footer-menu" role="complementary">
-          <h3 className="cdroc-footer-header">Member Board Affiliations</h3>
-          <ul>
-            <li><Link to="/">ACA Compliance Group</Link></li>
-            <li><Link to="/">Advanced ICU Care</Link></li>
-            <li><Link to="/">American Honda Finance Corporation</Link></li>
-            <li><Link to="/">American States Water</Link></li>
-            <li><Link to="/">Banc of California</Link></li>
-            <li><Link to="/">Bank OZK</Link></li>
-            <li><Link to="/">Beacon Healthcare Systems</Link></li>
-            <li><Link to="/">Broadway Financial Corp.</Link></li>
-            <li><Link to="/">CapRock Partners</Link></li>
-            <li><Link to="/">CareConnect MD</Link></li>
-          </ul>
-        </div>
-        <div className="cdroc-footer-menu" role="complementary">
           <h3 className="cdroc-footer-header">Quick Links</h3>
           <ul>
             <HeaderLinks />
