@@ -59,7 +59,7 @@ const card = {
   margin: "25px 0",
   boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.14)",
   borderRadius: "3px",
-  color: "#8d4625",
+  color: "#494949",
   background: "#fff"
 };
 
@@ -75,7 +75,7 @@ const dangerColor = "#f44336";
 const successColor = "#4caf50";
 const infoColor = "#00acc1";
 const roseColor = "#e91e63";
-const grayColor = "#8d4625";
+const grayColor = "#494949";
 
 const primaryBoxShadow = {
   boxShadow:
@@ -156,7 +156,7 @@ const defaultBoxShadow = {
 };
 
 const title = {
-  color: "#8d4625",
+  color: "#494949",
   margin: "1.75rem 0 0.875rem",
   textDecoration: "none",
   fontWeight: "700",

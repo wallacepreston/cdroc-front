@@ -20,7 +20,7 @@ const teamStyle = {
   },
   cardTitle,
   smallTitle: {
-    color: "#8d4625"
+    color: "#494949"
   },
   description: {
     color: "#999"
