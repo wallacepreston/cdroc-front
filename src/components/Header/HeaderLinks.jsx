@@ -29,7 +29,7 @@ function HeaderLinks({ ...props }) {
         `}
         render={({allWordpressPage: {edges}}) => {
           console.log('page', edges);
-          return edges.map(edge => (
+          return edges.sort((a, b) => a.node.menu_order > b.node.menu_order ? 1 : -1).map(edge => (
             <li 
               key={edge.node.slug}
             >
