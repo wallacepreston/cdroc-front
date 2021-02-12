@@ -22,6 +22,7 @@ function HeaderLinks({ ...props }) {
                 node {
                   title
                   slug
+                  menu_order
                 }
               }
             }
