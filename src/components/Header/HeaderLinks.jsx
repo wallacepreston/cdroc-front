@@ -17,7 +17,7 @@ function HeaderLinks({ ...props }) {
       <StaticQuery
         query={graphql`
           query {
-            allWordpressPage(sort: { fields: wordpress_id }, limit: 5) {
+            allWordpressPage(sort: { fields: wordpress_id }, limit: 7) {
               edges {
                 node {
                   title
@@ -28,6 +28,7 @@ function HeaderLinks({ ...props }) {
           }
         `}
         render={({allWordpressPage: {edges}}) => {
+          console.log('page', edges);
           return edges.map(edge => (
             <li 
               key={edge.node.slug}

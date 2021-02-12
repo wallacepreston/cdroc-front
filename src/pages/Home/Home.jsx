@@ -20,12 +20,12 @@ const Home = () => {
           <b>Quarterly Member Meetings – Wednesdays at 7:30 a.m.</b>
           <ul>
             <li>March 31, 2021</li>
-            <li>March 31, 2021</li>
             <li>June 30, 2021</li>
             <li>September 29, 2021</li>
+            <li>January 5, 2022</li>
           </ul>
           <h3>Special Discussion Meetings &amp; Events</h3>
-          <p>Our periodic “special discussion” meetings are scheduled during the year depending on the interests of our members, timeliness of topics, and the availability of invited speakers and our guests.</p>
+          <p>Our special meetings and events are scheduled opportunistically during the year depending on the interests of our members, timeliness of topics, and the availability of invited speakers and guests.</p>
           <h3>Scholarship Program</h3>
           <p>An academic scholarship award is granted each year by the CDROC to a high performing graduate student enrolled in The Paul Merage School of Business at UC Irvine. The 2019 Award Winner was Natalie Tincopa, and the 2020 Award Winner was Omar Ramil.</p>
 
