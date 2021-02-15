@@ -23,14 +23,16 @@ import Layout from "components/Layout.jsx";
 
 const Members = ({ classes, data, myName, ...rest }) => {
   
-  return <Layout>
-    <div className="cdroc-row">
-      <div>
-        <ProductSection />
-        <TeamSection members={data && data.allWordpressPost.edges}/>
+  return <>
+    <Layout metaTitle="Members - Corporate Directors Roundtable of Orange County">
+      <div className="cdroc-row">
+        <div>
+          <ProductSection />
+          <TeamSection members={data && data.allWordpressPost.edges}/>
+        </div>
       </div>
-    </div>
-  </Layout>
+    </Layout>
+  </>
 }
 
 export default Members;

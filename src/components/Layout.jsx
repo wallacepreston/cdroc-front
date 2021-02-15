@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from 'gatsby'
+import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
 
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 
@@ -8,9 +9,12 @@ import '../assets/cdroc-style.css';
 
 {/* data.wordpressPage.title */}
 {/* <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} /> */}
-const Layout = ({children}) => {
+const Layout = ({children, metaTitle}) => {
   return <>
-
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>{metaTitle}</title>
+    </Helmet>
     {/* <!-- branding header --> */}
     <header id="branding" className="cdroc-header cdroc-has-search">
       <div className="cdroc-header-container">
@@ -70,7 +74,7 @@ const Layout = ({children}) => {
           <h3 className="cdroc-footer-header">Contact Us</h3>
           <ul className="cdroc-contact-list">
             <li className="cdroc-contact-item">Email: <Link to="mailto:email@cdroc.org">karenw@cdroc.org</Link></li>
-            <li className="cdroc-contact-item">Phone: <Link to="tel:888-888-8888">888-888-8888</Link></li>
+            <li className="cdroc-contact-item">Location: Orange, CA 92866</li>
             <li>
               <ul className="cdroc-social-icons">
                 <li id="cdroc-icon-twitter" className="cdroc-social-icon">

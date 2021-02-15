@@ -2000,7 +2000,7 @@ body.cdroc-light-gray-bg .cdroc-side-nav {
   @media screen and (min-width: 40em) {
     .cdroc-sidebar-box {
       border-right: 1px solid #cfcfcf; 
-    background-color: #f7cd46;
+    background-color: #585858;
     color: white;
     font-weight: bolder;
   } }
