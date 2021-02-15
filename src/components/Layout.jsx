@@ -75,19 +75,6 @@ const Layout = ({children, metaTitle}) => {
           <ul className="cdroc-contact-list">
             <li className="cdroc-contact-item">Email: <Link to="mailto:email@cdroc.org">karenw@cdroc.org</Link></li>
             <li className="cdroc-contact-item">Location: Orange, CA 92866</li>
-            <li>
-              <ul className="cdroc-social-icons">
-                <li id="cdroc-icon-twitter" className="cdroc-social-icon">
-                  <Link aria-label="twitter" to="https://twitter.com"><svg aria-hidden="true" focusable="false"></svg></Link>
-                </li>
-                <li id="cdroc-icon-instagram" className="cdroc-social-icon">
-                  <Link aria-label="instagram" to="https://www.instagram.com"><svg aria-hidden="true" focusable="false"></svg></Link>
-                </li>
-                <li id="cdroc-icon-facebook" className="cdroc-social-icon">
-                  <Link aria-label="facebook" to="https://facebook.com/"><svg aria-hidden="true" focusable="false"></svg></Link>
-                </li>
-              </ul>
-            </li>
           </ul>
         </div>
       </div>
