@@ -17,12 +17,12 @@ import CardBody from "components/Card/CardBody.jsx";
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
 
 const TeamSection = ({ classes, members }) =>  {
-  const sortedMembers = members.sort((a, b) => {
+  const sortedMembers = members ? members.sort((a, b) => {
     const {node: {acf: memberA}} = a;
     const {node: {acf: memberB}} = b;
     if (memberA.name == 'Dean Yoost') return -1;
     return memberA.name > memberB.name ? 1 : -1;
-  });
+  }) : [];
   const imageClasses = classNames(
     classes.imgRaised,
     classes.imgRoundedCircle,
