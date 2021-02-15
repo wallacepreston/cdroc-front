@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'gatsby'
+import { Link } from "gatsby";
 
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Layout from "components/Layout.jsx";
@@ -8,7 +8,7 @@ import Layout from "components/Layout.jsx";
 {/* <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} /> */}
 const Home = () => {
   return <>
-    <Layout>
+    <Layout metaTitle="Corporate Directors Roundtable of Orange County">
       
       <div className="cdroc-row cdroc-flex-reverse">
 

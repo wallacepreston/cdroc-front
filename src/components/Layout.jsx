@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from 'gatsby'
+import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
 
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 
@@ -8,9 +9,12 @@ import '../assets/cdroc-style.css';
 
 {/* data.wordpressPage.title */}
 {/* <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} /> */}
-const Layout = ({children}) => {
+const Layout = ({children, metaTitle}) => {
   return <>
-
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>{metaTitle}</title>
+    </Helmet>
     {/* <!-- branding header --> */}
     <header id="branding" className="cdroc-header cdroc-has-search">
       <div className="cdroc-header-container">
