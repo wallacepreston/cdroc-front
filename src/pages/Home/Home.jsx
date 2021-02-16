@@ -9,7 +9,13 @@ import Layout from "components/Layout.jsx";
 const Home = () => {
   return <>
     <Layout metaTitle="Corporate Directors Roundtable of Orange County">
-      
+      {/* <!-- Page spacer --> */}
+      <div className="cdroc-row-full cdroc-row-page-title">
+        <div className="cdroc-row">
+          <div className="cdroc-col">
+          </div>
+        </div>
+      </div>
       <div className="cdroc-row cdroc-flex-reverse">
 
         {/* <!-- Body content --> */}

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
+import { Checkbox } from '@material-ui/core';
 
 import '../assets/fonts.0.0.1.css';
 import '../assets/cdroc-style.css';
@@ -10,6 +13,8 @@ import '../assets/cdroc-style.css';
 {/* data.wordpressPage.title */}
 {/* <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} /> */}
 const Layout = ({children, metaTitle}) => {
+  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  console.log('mobileMenuIsOpen: ', mobileMenuIsOpen);
   return <>
     <Helmet>
       <meta charSet="utf-8" />
@@ -35,7 +40,10 @@ const Layout = ({children, metaTitle}) => {
     <div id="cdroc-top-menus" className="cdroc-is-visible cdroc-horizontal" aria-hidden="false">
       <div className="cdroc-main-nav">
         <nav className="cdroc-nav-menu cdroc-nav-menu-reverse" aria-label="Main Menu">
-          <ul id="cdroc-main-nav">
+          <div id="cdroc-mobile-button">
+            <Checkbox icon={<MenuIcon />} checkedIcon={<CloseIcon />} color="default" onChange={() => setMobileMenuIsOpen(!mobileMenuIsOpen)} />
+          </div>
+          <ul id="cdroc-main-nav" className={mobileMenuIsOpen ? 'cdroc-mobile-nav' : 'cdroc-mobile-nav-hidden'}>
             <HeaderLinks />
           </ul>
         </nav>
@@ -45,13 +53,6 @@ const Layout = ({children, metaTitle}) => {
     {/* <!-- main content --> */}
     <main id="main">
 
-      {/* <!-- Page title --> */}
-      <div className="cdroc-row-full cdroc-row-page-title">
-        <div className="cdroc-row">
-          <div className="cdroc-col">
-          </div>
-        </div>
-      </div>
       {/* <!-- Page content --> */}
       <div className="cdroc-full-row">
         {children}
