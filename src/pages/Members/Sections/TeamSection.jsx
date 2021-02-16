@@ -5,14 +5,13 @@ import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // React icons
-import { FaLinkedin, FaChalkboardTeacher } from 'react-icons/fa';
+import { FaChalkboardTeacher } from 'react-icons/fa';
 
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
 
@@ -20,7 +19,7 @@ const TeamSection = ({ classes, members }) =>  {
   const sortedMembers = members ? members.sort((a, b) => {
     const {node: {acf: memberA}} = a;
     const {node: {acf: memberB}} = b;
-    if (memberA.name == 'Dean Yoost') return -1;
+    if (memberA.name === 'Dean Yoost') return -1;
     return memberA.name > memberB.name ? 1 : -1;
   }) : [];
   const imageClasses = classNames(

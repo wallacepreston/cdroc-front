@@ -1,11 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
-
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Layout from "components/Layout.jsx";
 
-{/* data.wordpressPage.title */}
-{/* <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} /> */}
 const Home = () => {
   return <>
     <Layout metaTitle="Corporate Directors Roundtable of Orange County">

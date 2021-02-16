@@ -10,8 +10,6 @@ import { Checkbox } from '@material-ui/core';
 import '../assets/fonts.0.0.1.css';
 import '../assets/cdroc-style.css';
 
-{/* data.wordpressPage.title */}
-{/* <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} /> */}
 const Layout = ({children, metaTitle}) => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   return <>
@@ -73,14 +71,14 @@ const Layout = ({children, metaTitle}) => {
         <div className="cdroc-footer-contact">
           <h3 className="cdroc-footer-header">Contact Us</h3>
           <ul className="cdroc-contact-list">
-            <li className="cdroc-contact-item">Email: <Link to="mailto:email@cdroc.org">karenw@cdroc.org</Link></li>
+            <li className="cdroc-contact-item">Email: <a href="mailto:karenw@cdroc.org">karenw@cdroc.org</a></li>
             <li className="cdroc-contact-item">Location: Orange, CA 92866</li>
           </ul>
         </div>
       </div>
 
       <div className="cdroc-copyright">
-        <p className="cdroc-contact-item">Feedback, questions or accessibility issues: <Link to="mailto:wallace.preston@gmail.com">Preston Wallace</Link></p>
+        <p className="cdroc-contact-item">Feedback, questions or accessibility issues: <a href="mailto:wallace.preston@gmail.com">Preston Wallace</a></p>
         <p>© Board of the <Link to="/">Corporate Directors Roundtable of Orange County</Link></p>
       </div>
     </footer>

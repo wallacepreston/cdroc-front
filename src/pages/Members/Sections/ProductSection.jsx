@@ -15,7 +15,6 @@ import productStyle from "assets/jss/material-kit-react/views/landingPageSection
 
 class ProductSection extends React.Component {
   render() {
-    const { classes } = this.props;
     return (
       <div>
             <h2>Our Members</h2>
