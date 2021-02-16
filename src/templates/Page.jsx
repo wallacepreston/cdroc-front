@@ -13,8 +13,8 @@ const Page = ({data}) => {
           </div>
         </div>
       </div>
-      <div className="cdroc-row cdroc-col">
-        <div>
+      <div className="cdroc-row">
+        <div className="cdroc-col">
           <h1>{data.wordpressPage.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
         </div>
