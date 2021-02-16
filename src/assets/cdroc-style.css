@@ -119,7 +119,11 @@ h2, .cdroc-h2 {
   margin-top: 2rem;
   margin-bottom: 16px;
   margin-bottom: 1rem;
-  line-height: 1.4; }
+  line-height: 1.4;
+}
+h1#cdroc-home-title {
+  margin-top: 0;
+}
 
 h3, .cdroc-h3 {
   font-size: 1.125rem;
@@ -1938,7 +1942,10 @@ body.cdroc-light-gray-bg .cdroc-side-nav {
     order: 2; 
   }
   .cdroc-body.cdroc-body {
-    padding-top: 3rem; } }
+    padding-top: 0rem; } }
+  h5.cdroc-member-boards {
+    margin-top: 0;
+  }
 
 .cdroc-card {
   flex-basis: 100%;

@@ -20,6 +20,7 @@ export const pageQuery = graphql`
             bio
             image
             name
+            affiliations
           }
           type
           categories {

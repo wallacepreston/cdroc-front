@@ -42,19 +42,20 @@ const TeamSection = ({ classes, members }) =>  {
                   <h4 className={classes.cardTitle}>
                     {member.name}
                     <br />
-                    <a href={member.bio}>
-                      <small className={classes.smallTitle}>
-                        <Button
-                          justIcon
-                          color="transparent"
-                          className={classes.marginSides}
-                        >
-                          <FaChalkboardTeacher/>
-                        </Button>
-                        Member Bio
-                      </small>
-                    </a>
                   </h4>
+                  <div dangerouslySetInnerHTML={{ __html: member.affiliations }} />
+                  <a href={member.bio}>
+                    <small className={classes.smallTitle}>
+                      <Button
+                        justIcon
+                        color="transparent"
+                        className={classes.marginSides}
+                      >
+                        <FaChalkboardTeacher/>
+                      </Button>
+                      Member Bio
+                    </small>
+                  </a>
                 </Card>
               </GridItem>
             ))

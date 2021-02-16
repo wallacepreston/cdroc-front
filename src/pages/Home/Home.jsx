@@ -21,7 +21,7 @@ const Home = () => {
         {/* <!-- Body content --> */}
         <div className="cdroc-col cdroc-body">
           
-          <h2>Celebrating 13 Years of Excellence in the Boardroom</h2>
+          <h1 id="cdroc-home-title">Celebrating 13 Years of Excellence in the Boardroom</h1>
           <h3>Upcoming Meetings</h3>
           <b>Quarterly Member Meetings – Wednesdays at 7:30 a.m.</b>
           <ul>

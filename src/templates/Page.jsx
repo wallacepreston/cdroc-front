@@ -6,7 +6,7 @@ import Layout from "components/Layout.jsx";
 const Page = ({data}) => {
   return <>
     <Layout metaTitle={`${data.wordpressPage.title} - Corporate Directors Roundtable of Orange County`}>
-      {/* <!-- Page title --> */}
+      {/* <!-- Page Spacer --> */}
       <div className="cdroc-row-full cdroc-row-page-title">
         <div className="cdroc-row">
           <div className="cdroc-col">
