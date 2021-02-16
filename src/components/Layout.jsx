@@ -14,7 +14,6 @@ import '../assets/cdroc-style.css';
 {/* <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} /> */}
 const Layout = ({children, metaTitle}) => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
-  console.log('mobileMenuIsOpen: ', mobileMenuIsOpen);
   return <>
     <Helmet>
       <meta charSet="utf-8" />

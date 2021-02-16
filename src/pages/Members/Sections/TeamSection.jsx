@@ -34,7 +34,7 @@ const TeamSection = ({ classes, members }) =>  {
         <GridContainer>
           {
             sortedMembers && sortedMembers.map(({node: {acf: member}}) => (
-              <GridItem xs={12} sm={12} md={4} key={member.image}>
+              <GridItem xs={12} sm={12} md={4} key={member.name}>
                 <Card plain>
                   <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                     <img src={member.image} alt={`headshot of ${member.name}`} className={imageClasses} />
