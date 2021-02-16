@@ -2085,10 +2085,10 @@ body.cdroc-light-gray-bg .cdroc-side-nav {
 }
 @media screen and (max-width: 56.25em) {
   #cdroc-main-nav a.cdroc-dropdown {
-    font-size: .55em;
+    font-size: .65em;
   }
 }
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 39.9em) {
   #cdroc-main-nav a.cdroc-dropdown {
     font-size: 1em;
   }
