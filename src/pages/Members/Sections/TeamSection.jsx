@@ -17,7 +17,7 @@ import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/t
 
 const TeamSection = ({ classes, members }) =>  {
   // add lastName prop
-  members = members.map(elem => {
+  members = members && members.map(elem => {
     const {node: {acf: member}} = elem;
     const {name} = member;
     const fullName = name.split(' ');
