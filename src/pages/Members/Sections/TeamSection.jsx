@@ -16,11 +16,19 @@ import Card from "components/Card/Card.jsx";
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
 
 const TeamSection = ({ classes, members }) =>  {
+  // add lastName prop
+  members = members.map(elem => {
+    const {node: {acf: member}} = elem;
+    const {name} = member;
+    const fullName = name.split(' ');
+    member.lastName = fullName[fullName.length - 1];
+    return elem;
+  })
+  // sort members alphabetically by last name
   const sortedMembers = members ? members.sort((a, b) => {
-    const {node: {acf: memberA}} = a;
-    const {node: {acf: memberB}} = b;
-    if (memberA.name === 'Dean Yoost') return -1;
-    return memberA.name > memberB.name ? 1 : -1;
+    const {node: {acf: {lastName: lastNameA}}} = a;
+    const {node: {acf: {lastName: lastNameB}}} = b;
+    return lastNameA > lastNameB ? 1 : -1;
   }) : [];
   const imageClasses = classNames(
     classes.imgRaised,
