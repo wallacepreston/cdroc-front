@@ -78,8 +78,8 @@ const Layout = ({children, metaTitle}) => {
       </div>
 
       <div className="cdroc-copyright">
-        <p className="cdroc-contact-item">Feedback, questions or accessibility issues: <a href="mailto:wallace.preston@gmail.com">Preston Wallace</a></p>
-        <p>© Board of the <Link to="/">Corporate Directors Roundtable of Orange County</Link></p>
+        <p className="cdroc-contact-item">Feedback, questions or accessibility issues: <a href="https://prestonwallace.com/">Preston Wallace</a></p>
+        <p>© <Link to="/">Corporate Directors Roundtable of Orange County</Link></p>
       </div>
     </footer>
     

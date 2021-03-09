@@ -28,7 +28,7 @@ const Home = () => {
           <h3>Special Discussion Meetings &amp; Events</h3>
           <p>Our special meetings and events are scheduled opportunistically during the year depending on the interests of our members, timeliness of topics, and the availability of invited speakers and guests.</p>
           <h3>Scholarship Program</h3>
-          <p>An academic scholarship award is granted each year by the CDROC to a high performing graduate student enrolled in The Paul Merage School of Business at UC Irvine. The 2019 Award Winner was Natalie Tincopa, and the 2020 Award Winner was Omar Ramil.</p>
+          <p>An academic scholarship award is granted each year by the CDROC to a high performing graduate student enrolled in The Paul Merage School of Business at UC Irvine. The 2020 Award Winner was Omar Ramil, and the 2021 Award Winner was Hope Hart.</p>
 
           <b>Established In Orange County, California on October 1, 2008</b>
 
