@@ -2,7 +2,7 @@
 ## Getting Started
 
     npm i
-    npm run serve
+    npm start
 
 ## Deployed URL
 App is deployed at [cdroc.org](https://cdroc.org/)

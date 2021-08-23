@@ -722,6 +722,10 @@ q:after {
   flex-wrap: wrap;
   position: relative; }
 
+.cdroc-row td {
+  max-width: 20em;
+}
+
 .cdroc-full-row-has-bg-img {
   background-repeat: no-repeat;
   background-size: cover; }
@@ -2099,5 +2103,9 @@ body.cdroc-light-gray-bg .cdroc-side-nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cdroc-row td {
+    max-width: 100%;
   }
 }
