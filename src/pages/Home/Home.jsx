@@ -28,9 +28,10 @@ const Home = () => {
           <h3>Special Discussion Meetings &amp; Events</h3>
           <p>Our special meetings and events are scheduled opportunistically during the year depending on the interests of our members, timeliness of topics, and the availability of invited speakers and guests.</p>
           <h3>Scholarship Program</h3>
-          <p>An academic scholarship award is granted each year by the CDROC to a high performing graduate student enrolled in The Paul Merage School of Business at UC Irvine. The 2020 Award Winner was Omar Ramil, and the 2021 Award Winner was Hope Hart.</p>
+          <p>An academic scholarship is granted annually the CDROC to a graduate student enrolled in The Paul Merage School of Business at UC Irvine and UCI’s School of Computer Science.</p>
 
           <b>Established In Orange County, California on October 1, 2008</b>
+          <br/><br/>
 
         </div>
 
@@ -50,13 +51,9 @@ const Home = () => {
           </div>
 
           {/* <!-- Sidbar secondary box --> */}
-          <div className="cdroc-sidebar-box-secondary">
-            <h3>Mentorship Program</h3>
-
-            <p>The CDROC has a mentorship program with UC Irvine undergraduate students enrolled in either the School of
-  Business or School of Computer Sciences. Currently four mentorships are active.</p>
-
-          </div>
+          {/* <div className="cdroc-sidebar-box-secondary">
+            placeholder for what was mentorship program
+          </div> */}
 
         </aside>
       </div>
