@@ -16,3 +16,13 @@ App is deployed at [cdroc.org](https://cdroc.org/)
 
 
 This [Gatsby](https://www.gatsbyjs.org/) site uses Material UI, along with [Material Kit React](https://www.creative-tim.com/product/material-kit-react) as a starting point.
+
+## Deployment
+There are multiple things that will trigger deploys.
+
+- An edit to the CMS content (not in this repo) will trigger an auto-deploy to the **staging** site
+- This repo: 
+    - A push to `main` will trigger an auto-deploy to the **staging** site
+    - A push to `prod` will trigger an auto-deploy to the **production** site
+
+The production site deploy can also be manually triggered on Netlify
