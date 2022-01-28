@@ -18,7 +18,7 @@ const Home = () => {
           
           <h1 id="cdroc-home-title">Celebrating 13 Years of Excellence in the Boardroom</h1>
           <h3>Upcoming Meetings</h3>
-          <b>Quarterly Member Meetings – Wednesdays at 7:30 a.m.</b>
+          <b>Quarterly Member Meetings - Wednesdays at 7:30 a.m.</b>
           <ul>
             <li>January 5, 2022</li>
             <li>April 6, 2022</li>
@@ -28,7 +28,7 @@ const Home = () => {
           <h3>Special Discussion Meetings &amp; Events</h3>
           <p>Our special meetings and events are scheduled opportunistically during the year depending on the interests of our members, timeliness of topics, and the availability of invited speakers and guests.</p>
           <h3>Scholarship Program</h3>
-          <p>An academic scholarship is granted annually the CDROC to a graduate student enrolled in The Paul Merage School of Business at UC Irvine and UCI’s School of Computer Science.</p>
+          <p>Two academic scholarship are granted annually by the CDROC to Latinx students enrolled at UC Irvine's Schools of Business and Computer Sciences.</p>
 
           <b>Established In Orange County, California on October 1, 2008</b>
           <br/><br/>
@@ -42,7 +42,7 @@ const Home = () => {
           <div className="cdroc-sidebar-box">
             <h3>Mission</h3>
 
-            <p>By and for Board Members, the Corporate Directors Roundtable of Orange County’s objective is to enhance
+            <p>By and for Board Members, the Corporate Directors Roundtable of Orange County's objective is to enhance
   the performance of its member Directors in their business, legal and ethical responsibilities. This objective is
   addressed through interactive and candid discussions among its members, and with outside experts, on
   challenges, emerging trends and leading practices. Eligibility for membership is by invitation only, and is
