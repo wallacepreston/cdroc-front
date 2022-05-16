@@ -20,10 +20,10 @@ const Home = () => {
           <h3>Upcoming Meetings</h3>
           <b>Quarterly Member Meetings - Wednesdays at 7:30 a.m.</b>
           <ul>
-            <li>January 5, 2022</li>
-            <li>April 6, 2022</li>
-            <li>June 29, 2022</li>
             <li>October 5, 2022</li>
+            <li>January 4, 2023</li>
+            <li>April 5, 2023</li>
+            <li>June 28, 2023</li>
           </ul>
           <h3>Special Discussion Meetings &amp; Events</h3>
           <p>Our special meetings and events are scheduled opportunistically during the year depending on the interests of our members, timeliness of topics, and the availability of invited speakers and guests.</p>
