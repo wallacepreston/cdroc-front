@@ -71,8 +71,8 @@ const Layout = ({children, metaTitle}) => {
         <div className="cdroc-footer-contact">
           <h3 className="cdroc-footer-header">Contact Us</h3>
           <ul className="cdroc-contact-list">
-            <li className="cdroc-contact-item">Email: <a href="mailto:karenw@cdroc.org">karenw@cdroc.org</a></li>
-            <li className="cdroc-contact-item">Location: Orange, CA 92866</li>
+            <li className="cdroc-contact-item">Email: <a href="mailto:cdrocorg@outlook.com">cdrocorg@outlook.com</a></li>
+            <li className="cdroc-contact-item">Location: Rancho Santa Margarita, CA 92688</li>
           </ul>
         </div>
       </div>
