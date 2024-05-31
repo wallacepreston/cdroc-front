@@ -16,9 +16,12 @@ const teamStyle = {
   ...imagesStyle,
   itemGrid: {
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
   },
-  cardTitle,
+  cardTitle: {
+    ...cardTitle,
+    marginBottom: "0px"
+  },
   smallTitle: {
     color: "#494949"
   },

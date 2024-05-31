@@ -48,8 +48,12 @@ const TeamSection = ({ classes, members }) =>  {
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     {member.name}
-                    <br />
                   </h4>
+                  {
+                    member.title 
+                      ? <em>{member.title}</em>
+                      : <br />
+                  }
                   <div dangerouslySetInnerHTML={{ __html: member.affiliations }} />
                   <a href={member.bio}>
                     <small className={classes.smallTitle}>

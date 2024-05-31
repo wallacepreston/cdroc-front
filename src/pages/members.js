@@ -21,6 +21,7 @@ export const pageQuery = graphql`
             image
             name
             affiliations
+            title
           }
           type
           categories {
