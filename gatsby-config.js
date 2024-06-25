@@ -19,6 +19,13 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-material-ui',
     {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: 'https://acrooc.com/graphql',
+        credentials: 'include',
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'gatsby-starter-default',

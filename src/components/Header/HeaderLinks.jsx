@@ -3,6 +3,7 @@ import React from "react";
 // react components for routing our app without refresh
 import { Link, StaticQuery, graphql } from 'gatsby'
 
+
 function HeaderLinks({ ...props }) {
   return (
     <>

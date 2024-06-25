@@ -6,6 +6,7 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
+const LoginPage = path.resolve("./src/pages/Auth/Login/Login.jsx")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -59,6 +60,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: page.node.wordpress_id,
         },
       })
+    });
+    createPage({
+      path: `/login`,
+      component: LoginPage,
+      context: {
+        id: 2,
+      },
     })
   // })
 }
