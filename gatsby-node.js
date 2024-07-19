@@ -50,8 +50,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     const Pages = result.data.allWordpressPage.edges
     Pages.forEach(page => {
-      // prevent members page from being created
-      if(page.node.slug === 'members') return;
+      // prevent some pages from being created
+      const restrictedPages = ['members', 'members-only'];
+      if(restrictedPages.includes(page.node.slug)) return;
       createPage({
         path: `/${page.node.slug}`,
         component: PageTemplate,

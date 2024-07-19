@@ -25,7 +25,7 @@ function Footer({ ...props }) {
   return <StaticQuery
     query={graphql`
       query {
-        allWordpressPage(sort: { fields: wordpress_id }, limit: 5) {
+        allWordpressPage(sort: { fields: menu_order order: DESC }, limit: 5) {
           edges {
             node {
               title

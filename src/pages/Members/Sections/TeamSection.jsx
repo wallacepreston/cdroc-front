@@ -16,6 +16,11 @@ import Card from "components/Card/Card.jsx";
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
 
 const TeamSection = ({ classes, members }) =>  {
+  // filter out Webmaster or has (none) in affiliations
+  members = members && members.filter(elem => {
+    const {node: {acf: member}} = elem;
+    return member.title !== 'Webmaster' && member.affiliations !== '(none)';
+  });
   // add lastName prop
   members = members && members.map(elem => {
     const {node: {acf: member}} = elem;
