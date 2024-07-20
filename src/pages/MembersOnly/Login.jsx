@@ -29,7 +29,7 @@ export const Login = ({ data, setUser, classes }) => {
 		setCardAnimation( '' );
 	}, [] );
 
-	const members = data.allWordpressPost.edges;
+	const members = data?.allWordpressPost.edges || [];
 
 	const onSubmit = ( e ) => {
 		e.preventDefault();
@@ -107,3 +107,29 @@ export const Login = ({ data, setUser, classes }) => {
 };
 
 export default withStyles(loginPageStyle)(Login);
+
+export const pageQuery = graphql`
+  query {
+    allWordpressPost(filter: {categories: {elemMatch: {name: {eq: "Member"}}}}) {
+      edges {
+        node {
+          slug
+          wordpress_id
+          acf {
+            bio
+            image
+            name
+            affiliations
+            title
+            email
+            member_passcode
+          }
+          type
+          categories {
+            name
+          }
+        }
+      }
+    }
+  }
+`
